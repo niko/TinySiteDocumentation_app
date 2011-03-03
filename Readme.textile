@@ -1,0 +1,47 @@
+h1. This is a TinySite example app
+
+
+h2. Getting started
+
+<pre><code>git clone git://github.com/niko/TinySite_example_app.git
+cd TinySite_example_app
+heroku create your-new-shiny-site
+git push heroku master
+heroku open
+</code></pre>
+
+
+h2. Run the app localy
+
+<pre><code>rackup config.ru
+</code></pre>
+
+Or to run it with thin:
+
+<pre><code>thin -R config.ru start
+</code></pre>
+
+h2. Change the content of the pages
+
+<pre><code>cd ~/Dropbox/Public/
+git clone git://github.com/niko/TinySite_example_files.git
+</code></pre>
+
+Change the name of the checked out folder to your liking.
+
+Then open the Dropbox website and copy the public link to the newly created folder. Enter the name of the folder as the @:file_path@ parameter in @config.ru@. Push to heroku:
+
+<pre><code>git push heroku master
+</code></pre>
+
+h2. After testing
+
+If you created a test app on heroku you should perhaps destroy it afterwards:
+
+<pre><code>heroku destroy --confirm your-new-shiny-site
+</code>
+
+h2. Further steps
+
+* Adopt and add layout, styles, javascript
+* Head over to the "TinySite github repo":https://github.com/niko/TinySite and read the documentation

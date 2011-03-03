@@ -1,0 +1,16 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    RedCloth (4.2.7)
+    haml (3.0.25)
+    rack (1.2.1)
+    tiny_site (0.1.5)
+      RedCloth
+      haml
+      rack
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  tiny_site (>= 0.1.5)

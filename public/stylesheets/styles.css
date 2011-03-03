@@ -1,0 +1,26 @@
+body {
+  margin: 0px auto;
+  padding: 2em;
+  max-width: 60em;
+  color: #111;
+  background-color:#eee;
+  font-family: "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
+}
+a {
+  color: black;
+  text-decoration: underline;
+}
+
+pre{
+  background-color:white;
+  border:1px solid #333;
+  padding:1em;
+}
+
+p code{
+  background-color:white;
+  padding:2px 3px;
+}
+
+ul.navigation{ list-style-type:none; margin:0; padding:0; }
+ul.navigation li a.active{ text-decoration:none; }

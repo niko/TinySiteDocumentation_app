@@ -2,13 +2,19 @@ body {
   margin: 0px auto;
   padding: 2em;
   max-width: 60em;
+  min-width: 600px;
   color: #111;
   background-color:#eee;
   font-family: "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
 }
+
 a {
   color: black;
   text-decoration: underline;
+}
+
+strong, .tinysite{
+  font-family: impact;
 }
 
 pre{
@@ -24,3 +30,8 @@ p code{
 
 ul.navigation{ list-style-type:none; margin:0; padding:0; }
 ul.navigation li a.active{ text-decoration:none; }
+
+img.logo{
+  width:400px;
+  float:right;
+}

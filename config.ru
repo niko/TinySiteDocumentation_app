@@ -1,5 +1,3 @@
-$LOAD_PATH << File.join( File.dirname( File.expand_path(__FILE__)), '../tiny_site/lib' )
-
 require 'tiny_site'
 
 use Rack::CommonLogger

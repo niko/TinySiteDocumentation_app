@@ -11,9 +11,7 @@ body {
 
 a { color: black; text-decoration: underline; }
 
-h1, h2{ font-weight: normal; }
-
-strong, .tinysite{ font-family: impact; }
+strong, .tinysite{ font-family: impact; font-weight:normal; }
 
 pre{ background-color: white; border:1px solid #333; padding: 1em; }
 code{ background-color: white;  padding: 2px 3px; }

@@ -9,7 +9,7 @@
     %ul{:class => 'navigation'}
       - global[:navigation].each do |url,name|
         %li
-          %a{ :href => url, :class => env[:path]=="/#{url}" ? 'active' : '' }
+          %a{ :href => url==:index ? '/' : url , :class => env[:path]=="/#{url}" ? 'active' : '' }
             = name
     
     ~ page['body']

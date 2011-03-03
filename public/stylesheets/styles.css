@@ -5,33 +5,33 @@ body {
   min-width: 600px;
   color: #111;
   background-color:#eee;
+  line-height:170%;
   font-family: "lucida grande", "Segoe UI", arial, verdana, "lucida sans unicode", tahoma, sans-serif;
 }
 
-a {
-  color: black;
-  text-decoration: underline;
-}
+a { color: black; text-decoration: underline; }
 
-strong, .tinysite{
-  font-family: impact;
-}
+h1, h2{ font-weight: normal; }
 
-pre{
-  background-color:white;
-  border:1px solid #333;
-  padding:1em;
-}
+strong, .tinysite{ font-family: impact; }
 
-p code{
-  background-color:white;
-  padding:2px 3px;
-}
+pre{ background-color: white; border:1px solid #333; padding: 1em; }
+code{ background-color: white;  padding: 2px 3px; }
 
-ul.navigation{ list-style-type:none; margin:0; padding:0; }
-ul.navigation li a.active{ text-decoration:none; }
+ul{ line-height:120%; }
+li{ padding:0.4em 0; }
 
-img.logo{
-  width:400px;
-  float:right;
+nav ul{ list-style-type: none; margin: 0; padding: 0; }
+nav li{ padding: 0.1em 0; }
+nav a.active{ text-decoration: none; }
+
+img.logo{ width: 400px; float: right; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  zoom: 1;     /* triggers hasLayout */
 }

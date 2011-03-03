@@ -7,10 +7,11 @@
     %link{:href => "/stylesheets/styles.css", :rel => "stylesheet", :type => "text/css"}
   %body{:class => env[:path].gsub('/','') }
     %img{:src=> "http://dl.dropbox.com/u/1343338/tiny-site-files/images/tinysite.png", :class => 'logo'}
-    %ul{:class => 'navigation'}
-      - global[:navigation].each do |url,name|
-        %li
-          %a{ :href => url==:index ? '/' : url , :class => env[:path]=="/#{url}" ? 'active' : '' }
-            = name
+    %nav
+      %ul
+        - global[:navigation].each do |url,name|
+          %li
+            %a{ :href => url==:index ? '/' : url , :class => env[:path]=="/#{url}" ? 'active' : '' }
+              = name
     
     ~ page['body']

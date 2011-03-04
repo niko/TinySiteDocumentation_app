@@ -13,6 +13,10 @@ a { color: black; text-decoration: underline; }
 
 strong, .tinysite{ font-family: impact; font-weight:normal; }
 
+#disqus_thread{
+  margin: 6em;
+}
+
 pre{ background-color: white; border:1px solid #333; padding: 1em; }
 code{ background-color: white;  padding: 2px 3px; }
 

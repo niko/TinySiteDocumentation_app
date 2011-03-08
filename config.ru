@@ -9,11 +9,11 @@ use Rack::Static, :urls => ['/stylesheets','/javascript'], :root => 'public'
 class TinySite::View
   
   def link_to(url, name=url, opts={})
-    opts, name = name, url if name.is_a? Hash # oder so
+    opts, name = name, url if name.is_a? Hash
     
-    o = opts.map{|k,v| "#{k}=#{v}" }.join(' ')
+    o = opts.map{|k,v| %Q{ #{k}="#{v}"} }.join
     
-    %Q{<a href="#{url}" #{o}>#{name}</a>}
+    %Q{<a href="#{url}"#{o}>#{name}</a>}
   end
   
   def navigation

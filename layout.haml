@@ -5,14 +5,10 @@
     %meta{:description => page[:description]}
     %title= "#{global[:title]} - #{page[:title]}"
     %link{:href => "/stylesheets/styles.css", :rel => "stylesheet", :type => "text/css"}
-  %body{:class => env[:path].gsub('/','') }
-    %img{:src=> "https://dl.dropbox.com/s/d55gpsn2e4196uh/images/tinysite.png?dl=1", :class => 'logo'}
+  %body
+    %img{:src=> file_url_for('images/tinysite.png'), :class => 'logo'}
     %nav
-      %ul
-        - global[:navigation].each do |url,name|
-          %li
-            %a{ :href => url==:index ? '/' : url , :class => env[:path]=="/#{url}" ? 'active' : '' }
-              = name
+      = navigation
     
     ~ page['body']
     

@@ -1,3 +1,3 @@
 source :gemcutter
 
-gem 'tiny_site', '>=0.2'
+gem 'tiny_site', '>=0.2.1'

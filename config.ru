@@ -1,4 +1,5 @@
-$LOAD_PATH << File.join( File.expand_path(File.dirname(__FILE__)), '../tiny_site/lib')
+# I use this for local testing. Hopefully I don't check this in.
+# $LOAD_PATH << File.join( File.expand_path(File.dirname(__FILE__)), '../tiny_site/lib')
 
 require 'tiny_site'
 

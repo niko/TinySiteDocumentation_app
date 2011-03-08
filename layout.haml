@@ -24,4 +24,11 @@
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
       })();
-      
+    
+    %hr
+    
+    .footer
+      Powered by
+      %a.gem_revision{:href=>'https://github.com/niko/TinySite'}= "TinySite version #{TinySite::VERSION}"
+      %br
+      %a.app_revision{:href=>"https://github.com/niko/TinySiteDocumentation_app"}

@@ -37,3 +37,5 @@ img.logo{ width: 400px; float: right; }
   visibility: hidden;
   zoom: 1;     /* triggers hasLayout */
 }
+
+.footer{ font-size:80%; text-align:center; width:100%; }

@@ -1,14 +1,34 @@
 # I use this for local testing. Hopefully I don't check this in.
-# $LOAD_PATH << File.join( File.expand_path(File.dirname(__FILE__)), '../tiny_site/lib')
+$LOAD_PATH << File.join( File.expand_path(File.dirname(__FILE__)), '../tiny_site/lib')
 
 require 'tiny_site'
+require 'tiny_site/version'
+require 'rack-revision-info'
+
+module Rack
+  class Runtime
+    def initialize(app)
+      @app = app
+    end
+    def call(env)
+      started_at = Time.now
+      status, headers, body = @app.call(env)
+      duration = Time.now - started_at
+      headers['X-Runtime'] = ("%0.6f" % duration)
+      [status, headers, body]
+    end
+  end
+end
+
 
 use Rack::CommonLogger
 use Rack::ContentLength
+use Rack::RevisionInfo, :path => File.expand_path(File.dirname(__FILE__)), :append => "div.footer a.app_revision", :revision_label => 'TinySite documentation app revision '
+# use Rack::RevisionInfo, :path => File.expand_path(File.dirname(__FILE__)), :header => true
+use Rack::Runtime
 use Rack::Static, :urls => ['/stylesheets','/javascript'], :root => 'public'
 
 class TinySite::View
-  
   def link_to(url, name=url, opts={})
     opts, name = name, url if name.is_a? Hash
     

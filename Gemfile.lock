@@ -4,7 +4,7 @@ GEM
     RedCloth (4.2.7)
     haml (3.0.25)
     rack (1.2.1)
-    tiny_site (0.1.7)
+    tiny_site (0.2.0)
       RedCloth
       haml
       rack
@@ -13,4 +13,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  tiny_site (>= 0.1.7)
+  tiny_site (>= 0.2)

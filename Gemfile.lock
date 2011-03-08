@@ -3,8 +3,11 @@ GEM
   specs:
     RedCloth (4.2.7)
     haml (3.0.25)
+    nokogiri (1.4.4)
     rack (1.2.1)
-    tiny_site (0.2.1)
+    rack-revision-info (0.4.1)
+      nokogiri (>= 1.2)
+    tiny_site (0.2.2)
       RedCloth
       haml
       rack
@@ -13,4 +16,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  tiny_site (>= 0.2.1)
+  rack-revision-info
+  tiny_site (>= 0.2.2)

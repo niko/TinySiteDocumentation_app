@@ -3,7 +3,6 @@ $LOAD_PATH << File.join( File.expand_path(File.dirname(__FILE__)), '../tiny_site
 
 require 'tiny_site'
 require 'tiny_site/version'
-require 'rack-revision-info'
 
 module Rack
   class Runtime
@@ -23,8 +22,6 @@ end
 
 use Rack::CommonLogger
 use Rack::ContentLength
-use Rack::RevisionInfo, :path => File.expand_path(File.dirname(__FILE__)), :append => "div.footer a.app_revision", :revision_label => 'TinySite documentation app revision '
-# use Rack::RevisionInfo, :path => File.expand_path(File.dirname(__FILE__)), :header => true
 use Rack::Runtime
 use Rack::Static, :urls => ['/stylesheets','/javascript'], :root => 'public'
 

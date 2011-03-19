@@ -3,6 +3,7 @@
 
 require 'tiny_site'
 require 'tiny_site/version'
+require 'rack/rewrite'
 
 module Rack
   class Runtime
@@ -19,16 +20,14 @@ module Rack
   end
 end
 
+use Rack::Runtime
 use Rack::CommonLogger
 use Rack::ContentLength
-use Rack::Runtime
-use Rack::Static, :urls => ['/stylesheets','/javascript','/static'], :root => 'public'
-
-require 'rack/rewrite'
 use Rack::Rewrite do
-  r301 '/robots.txt', '/static/robots.txt'
-  r301 '/favicon.ico', '/static/favicon.ico'
+  rewrite '/robots.txt', '/static/robots.txt'
+  rewrite '/favicon.ico', '/static/favicon.ico'
 end
+use Rack::Static, :urls => ['/stylesheets','/javascript','/static'], :root => 'public'
 
 
 class TinySite::View

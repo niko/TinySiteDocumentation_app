@@ -38,4 +38,5 @@ img.logo{ width: 400px; float: right; }
   zoom: 1;     /* triggers hasLayout */
 }
 
+.footnote{ font-size: 80%; }
 .footer{ font-size:80%; text-align:center; width:100%; }
